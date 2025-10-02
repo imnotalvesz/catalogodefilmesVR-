@@ -69,4 +69,35 @@
               listaFilmes Container.innerHTML = '<p>Nenhum filme cadastrado ainda.</p>';
         }
 
-      console.log('Filme no indice ${indice) removido. Catálogo atualizado:, catalogo);
+        console.log('Filme no indice ${indice) removido. Catálogo atualizado:, catalogo);
+    }
+
+   //-------------------------------------------------------------------------------------
+   //FUNÇÃO RENDERIZAÇÃO
+   //-------------------------------------------------------------------------------------
+   /** 
+    * Cria e exibe a estrutura HTML de um filme na lista.
+    * @param {Object} filme O objeto (titulo, sinopse) do filme...
+    * @param {number} indice Indice atual do filme no array catalogo.
+    */
+function renderizarFilme (filme, indice) {
+      // Remove a mensagem Inicial se for o primeiro filme
+   if (catalogo.length === 1) {
+       listaFilmesContainer.innerHTML = '';
+}
+
+     // A. CRIAÇÃO DE ELEMENTOS HTML (document.createElement)
+
+     // Cria a (div) que sera o continer de cada filmw.
+     const filmeDiv = document.createElement('div');
+     FilmeDiv.classList.add('filme-item'); // Adiciona una classe para estilicação
+
+     // Cria o <h3> para o titulo e define sau texto.
+     const tituloH3 = document.createElement("3");
+     tituloH3.textContent filme.titulo;
+
+     // Cria o <p> para a sinopse e define seu texto.
+     const sinopsep = document.createElement('p');
+     sinopsep.textContent = filme.sinopse;
+
+     // Cria o botão de remoção.
