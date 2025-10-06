@@ -1,0 +1,19 @@
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        padding: 20px;
+        max-width: 800px;
+        margin: 0 auto;
+    }
+    h1, h2 {
+        color: #333;
+    }
+     form {
+        padding: 20px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        margin-bottom: 20px;
+    }
+       label {
+        display: block;
+        margin-bottom: 5px;
