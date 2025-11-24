@@ -121,4 +121,4 @@ searchInput.addEventListener('input', (event) => {
 document.addEventListener('DOMContentLoaded', () => {
     // Busca filmes ao carregar a página (Ex: os mais recentes)
     buscarFilmes('popular');
-});
+}); /* legal 2.0 */
