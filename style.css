@@ -113,11 +113,11 @@ header {
 
     transition: translate 0.3s ease;
     overflow: hidden; /* Garante que o poster não saia da borda arredondada */
+}
 
-    &:hover {
-        transform: translateY(-8px); /* Efeito de elevação sutil do hover */
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.7);
-    }
+.card-filme:hover {
+    transform: translateY(-8px); /* Efeito de elevação sutil do hover */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.7);
 }
 
 .poster-filme {
@@ -131,21 +131,70 @@ header {
     position: absolute;
     top: 10px;
     right: 10px;
+    
+    font-size: 0.9em;
+    font-weight: bold;
     background-color: rgba(0, 0, 0, 0.7);
+
+    padding: 5px 8px;
+
+    border-radius: 5px;
 }
 
+.card-detalhes {
+    padding: 15px;
+}
 
+.titulo-filme {
+    font-size: 1.1em;
+    color: #f0f0f0;
 
+    margin-bottom: 10px;
+}
 
+.botao-adicionar {
+    background-color: #00e0b3; /* Cor de destaque */
+    color: #1f1f1f;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
 
+.botao-adicionar:hover {    
+    background-color: #00c7a0;
+}
 
+/* --- 6.   RESPONSIVIDADE (Ajustes para Telas Menores/Celulares) --- */
+@media (max-width: 768px) {
+    /* Header (Ocultar Links no mobile, mostra o botão do menu) */
+    .nav-menu a {
+        display: none;
+    }
 
+    .menu-toggle {
+        display: block; /* mostra o ícone de menu hamburguer */
+    }
 
+    /* Controles (Altera a ordem, a busca fica no topo) */
+    .controls-section {
+        flex-direction: column;
+        gap: 10px;
+        padding: 20px;
+    }
 
+    .search-bar {
+        width: 100%;
+        max-width: none;
+    }
 
+    .filter-dropdown {
+        width: 100%;
+    }
 
-
-
-
-
-
+    /* Lista de Filmes (Layout com menos colunas para telas menores) */
+    .lista-filmes {
+        /* No celular, a largura mínima para o card é maior, forçando 1 ou 2 colunas */
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
