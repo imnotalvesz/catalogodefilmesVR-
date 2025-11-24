@@ -198,3 +198,5 @@ header {
     .lista-filmes {
         /* No celular, a largura mínima para o card é maior, forçando 1 ou 2 colunas */
         grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+}
